@@ -13,19 +13,8 @@ $(document).ready(function () {
 
     //show first slide
     $('.active').show();
-
-    //Next Handler
-    $('#next').on('click', nextSlide);
-
-
-    $('#prev').on('click',prevSlide)
-
-
-        //Auto slider handler
-    if (autoswitch) {
-        setInterval(nextSlide,autoswitch_speed);
-    };
-setin
+    
+    
     function nextSlide() {
         $('.active').removeClass('active').addClass('oldActive');
         if ($('.oldActive').is(':last-child')) {
@@ -54,4 +43,17 @@ setin
         $('.slide').fadeOut(speed);
         $('.active').fadeIn(speed);
     }
+
+    //Next Handler
+    $('#next').on('click', nextSlide);
+
+
+    $('#prev').on('click',prevSlide)
+
+
+        //Auto slider handler
+    if (autoswitch) {
+        setInterval(nextSlide,autoswitch_speed);
+    };
+
 });
